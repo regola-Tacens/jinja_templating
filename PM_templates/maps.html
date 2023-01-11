@@ -110,30 +110,30 @@
       </div>
     {% endif %}
     <div class="title bottom_spacer_20">
-      Map name <span class="midgrey">•</span> {{ field.name }}
+      {% trans %}Map name{% endtrans %} <span class="midgrey">•</span> {{ field.name }}
     </div>
     <div class="flexContainer">
       <div class="flex_item_col_1">
         <article class="category">
-          <div class="category_title grey">product</div>
+          <div class="category_title grey">{% trans %}product{% endtrans %}</div>
           <div class="text_large">
             {{ field.product }} ({{ field.unitPerSurface }})
           </div>
         </article>
         <article class="category">
-          <div class="category_title grey">treatment area</div>
+          <div class="category_title grey">{% trans %}treatment area{% endtrans %}</div>
           <div class="text">{{ field.area }} ha</div>
         </article>
         {% if field.comment is defined %}
           <article class="category">
-            <div class="category_title grey">comment</div>
+            <div class="category_title grey">{% trans %}comment{% endtrans %}</div>
             <div class="text">{{ field.comment }}</div>
           </article>
         {% endif %}
       </div>
       <div class="flex_item_col_2">
         <article class="category">
-          <div class="category_title grey">total usage</div>
+          <div class="category_title grey">{% trans %}total usage{% endtrans %}</div>
           <div class="text_large">
             <span>{{ field.totalUsage.amount }} {{ field.totalUsage.unit }}</span>
             <span class="weight400">
@@ -145,7 +145,7 @@
           </div>
         </article>
         <article class="category">
-          <div class="category_title grey">average</div>
+          <div class="category_title grey">{% trans %}average{% endtrans %}</div>
           <div class="text">
             {{ field.average.amount }} {{ field.unitPerSurface }}
             <span class="midgrey">•</span>
